@@ -1,0 +1,9 @@
+-- MEMORY CONSTRAINED (192MiB) INFO --
+Pods:
+- image-filter-cfbfd9b5f-2fjgv
+- image-preprocess-5d9dd96f5-gpdxl
+- image-stats-746c9bfb67-frt5h
+
+Network instance <-> interface:
+- TX: {instance="worker3", interface="lxcb5c0d26fec32"}
+- RX: {instance="worker3", interface="lxcb5c0d26fec32"}

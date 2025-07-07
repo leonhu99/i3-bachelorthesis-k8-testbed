@@ -1,0 +1,9 @@
+-- BASELINES INFO --
+Pods:
+- image-filter-cfbfd9b5f-zgrv9
+- image-preprocess-6c747ff9dc-xzjl6
+- image-stats-746c9bfb67-85h7x
+
+Network instance <-> interface:
+- {instance="worker3", interface="lxc53e184f941ad"}
+- {instance="worker3", interface="lxc53e184f941ad"}

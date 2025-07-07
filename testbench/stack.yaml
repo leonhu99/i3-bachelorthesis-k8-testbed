@@ -1,0 +1,52 @@
+version: 1.0
+provider:
+  name: openfaas
+  gateway: http://172.16.44.202:8081
+functions:
+  image-preprocess:
+    lang: python3-http-debian
+    handler: ./image-preprocess
+    image: docker.io/leonhu229/image-preprocess:latest
+    annotations:
+      kubernetes.io/ingress-bandwidth: "100K"
+    #limits:
+      #cpu: 4000m
+      #memory: 5Gi
+    #requests:
+      #cpu: 4000m
+      #memory: 5Gi
+  image-filter:
+    lang: python3-http-debian
+    handler: ./image-filter
+    image: docker.io/leonhu229/image-filter:latest
+    #annotations:
+      #kubernetes.io/egress-bandwidth: "1M"
+    #spec:
+     # affinity:
+      #  podAntiAffinity:
+       #   requiredDuringSchedulingIgnoredDuringExecution:
+        #    - labelSelector:
+         #       matchExpressions:
+          #        - key: faas_function
+           #         operator: In
+            #        values:
+             #         - image-preprocess
+             # topologyKey: "kubernetes.io/hostname"
+  image-stats:
+    lang: python3-http-debian
+    handler: ./image-stats
+    image: docker.io/leonhu229/image-stats:latest
+    #annotations:
+      #kubernetes.io/egress-bandwidth: "1M"
+    #spec:
+      #affinity:
+       # podAntiAffinity:
+        #  requiredDuringSchedulingIgnoredDuringExecution:
+         #   - labelSelector:
+          #      matchExpressions:
+           #       - key: faas_function
+            #        operator: In
+             #       values:
+              #        - image-preprocess
+               #       - image-filter
+              #topologyKey: "kubernetes.io/hostname"

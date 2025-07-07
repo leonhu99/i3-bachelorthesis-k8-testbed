@@ -1,0 +1,3 @@
+-- BANDWIDTH CONSTRAINED (1Kbps) INFO --
+
+Failed to create pod sandbox: rpc error: code = Unknown desc = failed to set up sandbox container "a06c0cb710c2541aa89a63d7555eacf00ba2d10555b47503114ecb3098f960dc" network for pod "image-preprocess-54f699ccd7-8vlmx": networkPlugin cni failed to set up pod "image-preprocess-54f699ccd7-8vlmx_openfaas-fn" network: failed to get pod bandwidth from annotations: unable to parse quantity's suffix

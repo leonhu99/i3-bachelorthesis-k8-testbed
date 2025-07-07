@@ -1,0 +1,18 @@
+apiVersion: chaos-mesh.org/v1alpha1
+kind: NetworkChaos
+metadata:
+  name: add-network-delay
+spec:
+  action: delay
+  mode: all
+  selector:
+    namespaces:
+      - openfaas-fn
+    labelSelectors:
+      faas_function: image-preprocess
+  delay:
+    latency: '250ms'
+    correlation: '0'
+    jitter: '10ms'
+  direction: to
+  duration: '15m'
