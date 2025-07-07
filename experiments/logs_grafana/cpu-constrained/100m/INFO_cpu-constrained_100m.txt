@@ -1,0 +1,9 @@
+-- CPU CONSTRAINED (100m) INFO --
+Pods:
+- image-filter-cfbfd9b5f-jrq4f
+- image-preprocess-7c7c848d7-qk65t
+- image-stats-746c9bfb67-bvjsp
+
+Network instance <-> interface:
+- TX: {instance="worker3", interface="lxc1b3db75e6ca7"}
+- RX: {instance="worker3", interface="lxc1b3db75e6ca7"}
