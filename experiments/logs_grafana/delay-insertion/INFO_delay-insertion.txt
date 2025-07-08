@@ -1,0 +1,9 @@
+--DELAY INSERTION (50ms, 100ms, 250ms, 250ms+10ms Jitter, 250ms+50ms Jitter, 500ms) INFO --
+Pods:
+- image-filter-cfbfd9b5f-tvfzt
+- image-preprocess-6c747ff9dc-77b5s
+- image-stats-746c9bfb67-bzkw5
+
+Network instance <-> interface:
+- TX: {instance="worker3", interface="lxc0058bbbb0c82"}
+- RX: {instance="worker3", interface="lxc0058bbbb0c82"}
